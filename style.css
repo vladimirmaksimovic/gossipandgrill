@@ -1,0 +1,393 @@
+/** CSS Content
+  * 1. Imports
+  * 2. Variables
+  * 3. CSS Reset
+  * 4. Global Styles
+  * 5. Header Section
+  * 6. Landing Page 
+  * 7. Gossip Page
+  * #.  Media Queries
+  */
+
+/*** Imports ***/
+
+/* Heading Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+/*** Variables ***/
+
+:root {
+  /* colors */
+  --white: #f1f1f1;
+  --black: #0f0f0f;
+  --red: #ff0044;
+  --blue: #1e90ff;
+  --pink: #fee4e8;
+  --whiter-shade-of-pale: #f1f1f1ea;
+  --black-ish: #0f0f0fb7;
+  /* font family */
+  --primary-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --main-heading-font-family: 'Dancing Script', cursive;
+  --heading-font-family: 'Aboreto', cursive;
+  /* other */
+  --border-radius: 3px;
+}
+
+/*** CSS Reset ***/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*** Global Styles ***/
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--primary-font-family);
+  color: var(--black);
+  line-height: 1.6;
+  border-color: var(--white);
+  background-color: var(--pink);
+}
+
+h1 {
+  font-family: var(--main-heading-font-family);
+}
+
+h3 {
+  font-family: var(--heading-font-family);
+}
+
+a {
+  transition-duration: 0.25s;
+}
+
+main {
+  min-height: 90vh;
+}
+
+header {
+  min-height: 10vh;
+  background-color: var(--whiter-shade-of-pale);
+}
+
+footer {
+  min-height: 10vh;
+  background-color: var(--black-ish) !important;
+  color: var(--white);
+}
+
+main, footer {
+  padding: 1rem 2rem;
+}
+
+.content-limit {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--whiter-shade-of-pale);
+}
+
+/*** Header Section ***/
+
+header {
+  border-bottom: 1px solid var(--black);
+}
+
+header ul {
+  min-height: 10vh;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+header a {
+  text-decoration: none;
+  font-family: var(--heading-font-family);
+  color: var(--black);
+  position: relative;
+}
+
+/* navbar link underline style */
+header a::after,
+header a::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black);
+  transition-duration: 0.25s;
+}
+
+header a:hover::after,
+header a:hover::before {
+  width: 100%;
+}
+
+/*** Landing Page ***/
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.landing-page h1 {
+  font-size: 6rem;
+}
+
+.landing-page section {
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.landing-page h3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.landing-page .left {
+  padding: 0 4rem 0 0;
+}
+
+.landing-page .right {
+  padding: 0 0 0 4rem;
+}
+
+.landing-page .center {
+  justify-self: center;
+}
+
+.landing-page a {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--black);
+  transition-duration: 0.25s;
+}
+
+.landing-page a:hover {
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+/* Background Grid */
+
+.bg-grid {
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  opacity: 0.5;
+}
+
+.bg-grid img {
+  max-width: 100%;
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*** Home Page ***/
+
+.home-content {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.home-content section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-content section a {
+  text-decoration: none;
+}
+
+.home-content section a:hover {
+  text-decoration: underline;
+}
+
+.gossip-section {
+  background-image: url("./img/01-pexels-tim-douglas.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gossip-section a {
+  color: var(--black);
+}
+
+.grill-section {
+  background-image: url("./img/02-pexels-cottonbro.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--black-ish);
+  color: var(--white);
+}
+
+.grill-section a {
+  color: var(--white);
+}
+
+/*** Gossip Page ***/
+
+.gossip-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.card {
+  padding: 0.5rem 1rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.card-header {
+  padding: 0 0 0.25rem 0;
+}
+
+.card-header h2 {
+  font-family: var(--heading-font-family);
+}
+
+.card-header h4 {
+  font-family: var(--main-heading-font-family);
+  color: var(--red);
+}
+
+.card-body {
+  padding: 0.25rem 0;
+  /* border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black); */
+}
+
+.card-footer {
+  padding: 0.25rem 0 0 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-footer a {
+  font-size: 1.2rem;
+}
+
+.card-footer a:hover {
+  color: var(--black);
+}
+
+/*** Media Queries ***/
+
+/* max width 1055px */
+@media (max-width: 1055px) {
+  /* gossip container grid gap */
+  .gossip-container {
+    gap: 2rem;
+  }
+}
+
+/* max width 960px */
+@media (max-width: 960px) {
+  /* font size */
+  html {
+    font-size: 16px;
+  }
+
+  /* landing page heading align */
+  .landing-page h1 {
+    text-align: center;
+  }
+
+  /* gossip section card grid */
+  .gossip-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gossip-container {
+    gap: 1.5rem;
+  }
+}
+
+/* max width 670px */
+@media (max-width: 670px) {
+  /* font-size */
+  html {
+    font-size: 14px;
+  }
+
+  /* landing page background */
+  .bg-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  /* background image height */
+  .bg-grid img {
+    height: 33.25vh;
+  }
+
+  .gossip-container {
+    gap: 1rem;
+  }
+}
+
+/* max width 550px */
+@media (max-width: 550px) {
+  /* font-size */
+  html {
+    font-size: 13px;
+  }
+  
+  /* home section responsive style */
+  .home-content {
+    flex-direction: column;
+  }
+  
+  .home-content section {
+    min-height: 45vh;
+  }
+
+  /* gossip section card grid */
+  .gossip-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/* max width 400px */
+@media (max-width: 400px) {
+  /* font-size */
+  html {
+    font-size: 12px;
+  }
+}
