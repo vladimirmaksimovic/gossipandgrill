@@ -58,10 +58,15 @@ body {
 }
 
 h1 {
+  font-size: 6rem;
+  text-align: center;
+}
+
+h1, h2 {
   font-family: var(--main-heading-font-family);
 }
 
-h3 {
+h3, h4, h5, h6 {
   font-family: var(--heading-font-family);
 }
 
@@ -92,6 +97,13 @@ main, footer {
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--whiter-shade-of-pale);
+}
+
+.heading-section {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 /*** Header Section ***/
@@ -145,9 +157,9 @@ header a:hover::before {
   gap: 4rem;
 }
 
-.landing-page h1 {
+/* .landing-page h1 {
   font-size: 6rem;
-}
+} */
 
 .landing-page section {
   padding: 0.5rem 0;
@@ -215,12 +227,16 @@ header a:hover::before {
 
 .home-content {
   padding: 0;
+}
+
+.home-content article {
   display: flex;
   justify-content: space-evenly;
 }
 
 .home-content section {
   width: 100%;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -242,8 +258,10 @@ header a:hover::before {
   background-size: cover;
 }
 
-.gossip-section a {
-  color: var(--black);
+.gossip-section, .grill-section,
+.gossip-section a, .grill-section a {
+  font-size: 2rem;
+  color: var(--white);
 }
 
 .grill-section {
@@ -369,7 +387,7 @@ header a:hover::before {
   }
   
   /* home section responsive style */
-  .home-content {
+  .home-content article {
     flex-direction: column;
   }
   
