@@ -103,7 +103,12 @@ main, footer {
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
+}
+
+.heading-section h3 {
+  text-align: center;
 }
 
 /*** Header Section ***/
@@ -145,6 +150,59 @@ header a:hover::after,
 header a:hover::before {
   width: 100%;
 }
+
+/* Card Style */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.card {
+  padding: 0.5rem 1rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.card-header {
+  padding: 0 0 0.25rem 0;
+}
+
+.card-header h2 {
+  font-family: var(--heading-font-family);
+}
+
+.card-header h4 {
+  font-family: var(--main-heading-font-family);
+  color: var(--red);
+}
+
+.card-body {
+  padding: 0.25rem 0;
+  /* border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black); */
+}
+
+.card-body ul {
+  padding: 0 0 0.5rem 0;
+  list-style: none;
+}
+
+.card-footer {
+  padding: 0.25rem 0 0 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-footer a {
+  font-size: 1.2rem;
+}
+
+.card-footer a:hover {
+  color: var(--black);
+}
+
 
 /*** Landing Page ***/
 
@@ -277,9 +335,10 @@ header a:hover::before {
   color: var(--white);
 }
 
+
 /*** Gossip Page ***/
 
-.gossip-container {
+/* .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
@@ -306,8 +365,8 @@ header a:hover::before {
 
 .card-body {
   padding: 0.25rem 0;
-  /* border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black); */
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
 }
 
 .card-footer {
@@ -322,14 +381,14 @@ header a:hover::before {
 
 .card-footer a:hover {
   color: var(--black);
-}
+} */
 
 /*** Media Queries ***/
 
 /* max width 1055px */
 @media (max-width: 1055px) {
-  /* gossip container grid gap */
-  .gossip-container {
+  /* card grid */
+  .card-container {
     gap: 2rem;
   }
 }
@@ -346,14 +405,12 @@ header a:hover::before {
     text-align: center;
   }
 
-  /* gossip section card grid */
-  .gossip-container {
+  /* card grid */
+  .card-container {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gossip-container {
     gap: 1.5rem;
   }
+
 }
 
 /* max width 670px */
@@ -374,7 +431,7 @@ header a:hover::before {
     height: 33.25vh;
   }
 
-  .gossip-container {
+  .card-container {
     gap: 1rem;
   }
 }
@@ -395,8 +452,8 @@ header a:hover::before {
     min-height: 45vh;
   }
 
-  /* gossip section card grid */
-  .gossip-container {
+  /* card grid */
+  .card-container {
     grid-template-columns: repeat(1, 1fr);
   }
 

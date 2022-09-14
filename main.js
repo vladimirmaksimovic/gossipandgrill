@@ -6,3 +6,4 @@ for (let i = 0; i < navLink.length; i++) {
     navLink[i].style.color = "var(--blue)";
   }
 }
+
