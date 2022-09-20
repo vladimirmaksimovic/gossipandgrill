@@ -383,6 +383,15 @@ header a:hover::before {
   color: var(--black);
 } */
 
+/*** Grill Page ***/
+
+.grill .card-header h2 {
+  font-family: var(--main-heading-font-family);
+  font-size: 2rem;
+  text-align: center;
+
+}
+
 /*** Media Queries ***/
 
 /* max width 1055px */
