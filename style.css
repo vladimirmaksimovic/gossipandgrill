@@ -180,8 +180,17 @@ header a:hover::before {
 
 .card-body {
   padding: 0.25rem 0;
+  display: flex;
+  flex-direction: column;
   /* border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black); */
+}
+
+.card-body img {
+  max-width: 100%;
+  margin: auto;
+  padding: 0.5rem 0;
+  border-radius: var(--border-radius);
 }
 
 .card-body ul {
@@ -192,7 +201,20 @@ header a:hover::before {
 .card-footer {
   padding: 0.25rem 0 0 0;
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
+}
+
+.card-footer .share-container {
+  padding: 0.25rem 0 0 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-footer iframe {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
 }
 
 .card-footer a {
@@ -384,6 +406,10 @@ header a:hover::before {
 } */
 
 /*** Grill Page ***/
+
+.grill-content {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 .grill .card-header h2 {
   font-family: var(--main-heading-font-family);
