@@ -22,9 +22,10 @@
   /* colors */
   --white: #f1f1f1;
   --black: #0f0f0f;
+  --grey: #d1d1d1;
   --red: #ff0044;
   --blue: #1e90ff;
-  --pink: #fee4e8;
+  --pink: #ffbdc756;
   --whiter-shade-of-pale: #f1f1f1ea;
   --black-ish: #0f0f0fb7;
   /* font family */
@@ -114,7 +115,7 @@ main, footer {
 /*** Header Section ***/
 
 header {
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--grey);
 }
 
 header ul {
@@ -279,6 +280,14 @@ header a:hover::before {
   color: var(--white);
 }
 
+.landing-opacity {
+  opacity: 0.5;
+}
+
+.content-opacity {
+  opacity: 0.2;
+}
+
 /* Background Grid */
 
 .bg-grid {
@@ -291,7 +300,6 @@ header a:hover::before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  opacity: 0.5;
 }
 
 .bg-grid img {
