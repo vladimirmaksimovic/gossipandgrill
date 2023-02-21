@@ -20,8 +20,8 @@
 
 :root {
   /* colors */
-  --white: #f1f1f1;
-  --black: #0f0f0f;
+  --white: #f2f2f2;
+  --black: #222;
   --grey: #d1d1d1;
   --red: #ff0044;
   --blue: #1e90ff;
@@ -101,11 +101,14 @@ main, footer {
 }
 
 .heading-section {
+  min-height: 80vh;
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
+  background: url("./img/08-pexels-fauxels.jpg");
+  /* color: var(--white); */
 }
 
 .heading-section h3 {
@@ -324,47 +327,70 @@ header a:hover::before {
 
 .home-content section {
   width: 100%;
-  height: 40vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .home-content section a {
+  padding: 1rem 2rem;
   text-decoration: none;
+  font-family: var(--heading-font-family);
+  font-size: 4rem;
+  border-radius: 2rem;
 }
 
-.home-content section a:hover {
+/* .home-content section a:hover {
   text-decoration: underline;
-}
+} */
 
 .gossip-section {
-  background-image: url("./img/01-pexels-tim-douglas.jpg");
+  /* background-image: url("./img/01-pexels-tim-douglas.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: var(--pink);
+  color: var(--black);
 }
 
-.gossip-section, .grill-section,
-.gossip-section a, .grill-section a {
-  font-size: 2rem;
+.gossip-section a {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.gossip-section a:hover {
+  background-color: var(--black);
   color: var(--white);
+  border: 1px solid var(--white);
 }
 
 .grill-section {
-  background-image: url("./img/02-pexels-cottonbro.jpg");
+  /* background-image: url("./img/02-pexels-cottonbro.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--black-ish);
+  background-size: cover; */
+  background-color: var(--black);
   color: var(--white);
 }
 
 .grill-section a {
   color: var(--white);
+  border: 1px solid var(--white);
 }
 
+.grill-section a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+/* 
+.gossip-section a, .grill-section a {
+  font-family: var(--heading-font-family); 
+  font-size: 4rem;
+}*/
 
 /*** Gossip Page ***/
 
@@ -423,7 +449,35 @@ header a:hover::before {
   font-family: var(--main-heading-font-family);
   font-size: 2rem;
   text-align: center;
+}
 
+/*** About Page ***/
+
+/* .about-content {
+  background-image: url("./img/07-pexels-fauxels.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+} */
+
+.about-content article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-heading-section {
+  min-height: 50vh;
+  background-image: url("./img/07-pexels-fauxels.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+
+.about-content section {
+  text-align: center;
 }
 
 /*** Media Queries ***/
