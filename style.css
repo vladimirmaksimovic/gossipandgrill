@@ -327,7 +327,7 @@ header a:hover::before {
 
 .home-content section {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -528,6 +528,11 @@ header a:hover::before {
     height: 33.25vh;
   }
 
+  /* home section responsive style */
+  .home-content article {
+    flex-direction: column;
+  }
+
   .card-container {
     gap: 1rem;
   }
@@ -541,9 +546,9 @@ header a:hover::before {
   }
   
   /* home section responsive style */
-  .home-content article {
+  /* .home-content article {
     flex-direction: column;
-  }
+  } */
   
   .home-content section {
     min-height: 45vh;
@@ -561,5 +566,29 @@ header a:hover::before {
   /* font-size */
   html {
     font-size: 12px;
+  }
+  /* nav menu flex gap */
+  header ul {
+    gap: 3.5rem;
+  }
+  /* gossip and grill section height */
+  /* .gossip-section, .grill-section {
+    height: 45vh;
+  } */
+}
+
+/* max width 350px */
+@media (max-width: 350px) {
+  /* nav menu flex gap */
+  header ul {
+    gap: 3rem;
+  }
+}
+
+/* max width 325px */
+@media (max-width: 325px) {
+  /* nav menu flex gap */
+  header ul {
+    gap: 2rem;
   }
 }
