@@ -168,6 +168,7 @@ header a:hover::before {
   padding: 0.5rem 1rem;
   background-color: var(--white);
   border-radius: var(--border-radius);
+  box-shadow: var(--black) 0 2px 4px;
 }
 
 .card-header {
@@ -583,6 +584,11 @@ header a:hover::before {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  /* button size in home page */
+  .home-content section a {
+    font-size: 3.5rem;
+  }
+
 }
 
 /* max width 400px */
@@ -595,10 +601,10 @@ header a:hover::before {
   header ul {
     gap: 3.5rem;
   }
-  /* gossip and grill section height */
-  /* .gossip-section, .grill-section {
-    height: 45vh;
-  } */
+  /* button size in home page */
+  .home-content section a {
+    font-size: 3rem;
+  }
 }
 
 /* max width 350px */
@@ -607,6 +613,11 @@ header a:hover::before {
   header ul {
     gap: 3rem;
   }
+
+  /* button size in home page */
+  .home-content section a {
+    font-size: 2.5rem;
+  }
 }
 
 /* max width 325px */
@@ -614,5 +625,10 @@ header a:hover::before {
   /* nav menu flex gap */
   header ul {
     gap: 2rem;
+  }
+
+  /* button size in home page */
+  .home-content section a {
+    font-size: 2rem;
   }
 }
